@@ -96,6 +96,10 @@ func main() {
 			log.Fatal(err)
 		}
 
+		if value == nil {
+			log.Fatal("did not return results")
+		}
+
 		if value.Type() != model.ValMatrix {
 			log.Fatalf("Expected matrix value type; got %v", value.Type())
 		}
